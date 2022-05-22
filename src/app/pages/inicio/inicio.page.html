@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary" >Componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let c of componentes" [routerLink]="c.redirectTo" detail>
+      <ion-icon color="primary" slot="start" [name]="c.icon"></ion-icon>
+      {{c.name}}
+    </ion-item>
+  </ion-list>
+  <!--
+<ion-button expand="block"  routerLink="/alert" fill="clear" shape="round">
+  Alert
+</ion-button>
+
+<ion-button routerLink="/action-sheet" expand="block" fill="clear" shape="round">
+  Action Sheet
+</ion-button>-->
+</ion-content>
