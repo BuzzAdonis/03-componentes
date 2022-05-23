@@ -58,6 +58,16 @@ export class InicioPage implements OnInit {
       icon:'grid-outline',
       name:'Grids',
       redirectTo:'/grid'
+    },
+    {
+      icon:'hammer-outline',
+      name:'Inputs',
+      redirectTo:'/input'
+    },
+    {
+      icon:'list-outline',
+      name:'Lists',
+      redirectTo:'/list'
     }
   ];
 
