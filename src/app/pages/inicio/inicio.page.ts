@@ -60,14 +60,29 @@ export class InicioPage implements OnInit {
       redirectTo:'/grid'
     },
     {
+      icon:'infinite-outline',
+      name:'Infinite Scroll',
+      redirectTo:'/infinite'
+    },
+    {
       icon:'hammer-outline',
       name:'Inputs',
       redirectTo:'/input'
     },
     {
       icon:'list-outline',
-      name:'Lists',
+      name:'Lists - Sliding',
       redirectTo:'/list'
+    },
+    {
+      icon:'reorder-three-outline',
+      name:'Lists - reorder',
+      redirectTo:'/list-reorder'
+    },
+    {
+      icon:'reload-circle-outline',
+      name:'Loading',
+      redirectTo:'/loading'
     }
   ];
 

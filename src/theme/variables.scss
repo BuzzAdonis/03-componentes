@@ -123,6 +123,14 @@
   --ion-color-github-shade: #000000;
   --ion-color-github-tint: #1a1a1a;
 
+    /*Trasparente*/
+    --ion-color-trasparente: rgba(0,0,0,0);
+    --ion-color-trasparente-rgb: 0,0,0,0;
+    --ion-color-trasparente-contrast: rgb(255, 255, 255);;
+    --ion-color-trasparente-contrast-rgb: 255,255,255,0;
+    --ion-color-trasparente-shade: rgba(0,0,0,0);;
+    --ion-color-trasparente-tint: rgba(0,0,0,0);;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -336,4 +344,16 @@
   --ion-color-contrast-rgb: var(--ion-color-github-contrast-rgb) !important;
   --ion-color-shade: var(--ion-color-github-shade) !important;
   --ion-color-tint: var(--ion-color-github-tint) !important;
+}
+
+.ion-color-trasparente {
+  --ion-color-base: var(--ion-color-trasparente) !important;
+  --ion-color-base-rgb: var(--ion-color-trasparente-rgb) !important;
+  --ion-color-contrast: var(--ion-color-trasparente-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-trasparente-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-trasparente-shade) !important;
+  --ion-color-tint: var(--ion-color-trasparente-tint) !important;
+  --border-color: none !important;
+  --border-width: 0px !important;
+
 }
