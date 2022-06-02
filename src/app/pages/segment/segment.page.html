@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+      defaultHref="/"
+      color="primary"
+      text="Regresar"
+      mode="ios"
+      ></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Segment</ion-title>
+  </ion-toolbar>
+  <ion-segment value="todos" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="">
+      <ion-label>Todos</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="DC Comics">
+      <ion-label>DC Comics</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="Marvel Comics">
+      <ion-label>Marvel Comics</ion-label>
+    </ion-segment-button>
+
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let superHero of (superHeros|async)|filtro:textoBuscar:'publisher'"
+    class="animate__animated animate__fadeIn animate__faster">
+      <ion-label>
+        <h3>{{superHero.superhero}} <small> {{superHero.alter_ego}} </small></h3>
+        <P>{{superHero.first_appearance}}</P>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-rigth">{{superHero.publisher}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="(superHeros|async) === null">
+    <ion-item *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1,1,1]">
+      <ion-label>
+        <h3><ion-skeleton-text animated style="width: 70%"></ion-skeleton-text></h3>
+        <P><ion-skeleton-text animated style="width: 100%"></ion-skeleton-text></P>
+      </ion-label>
+      <P><ion-skeleton-text slot="end" animated style="width: 40%"></ion-skeleton-text></P>
+    </ion-item>
+  </ion-list>
+</ion-content>
