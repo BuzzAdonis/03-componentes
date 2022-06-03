@@ -91,6 +91,18 @@ const routes: Routes = [
   {
     path: 'segment',
     loadChildren: () => import('./pages/segment/segment.module').then( m => m.SegmentPageModule)
+  },
+  {
+    path: 'slider',
+    loadChildren: () => import('./pages/slider/slider.module').then( m => m.SliderPageModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
+    path: 'toast',
+    loadChildren: () => import('./pages/toast/toast.module').then( m => m.ToastPageModule)
   }
 ];
 
